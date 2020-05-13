@@ -7,7 +7,7 @@
 
 namespace vanterbit\daterange;
 
-use vanterbit\base\AssetBundle;
+use kartik\base\AssetBundle;
 
 /**
  * DateRangePicker bundle for \vanterbit\daterange\DateRangePicker.
