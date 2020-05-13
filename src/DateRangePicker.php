@@ -151,11 +151,12 @@ class DateRangePicker extends InputWidget
      * will be replaced with the hidden form input. In addition, the element with css class `range-value` will be
      * replaced by the calculated plugin value. The special token `{value}` will be replaced with the value of the hidden
      * form input during initialization and the token `{pickerIcon}` will be replaced with the [[pickerIcon]] property.
+     * Origin ( вставил style= "display:none" )
      */
     public $containerTemplate = <<< HTML
         <div class="kv-drp-dropdown">
             <span class="left-ind">{pickerIcon}</span>
-            <input type="text" readonly class="form-control range-value" value="{value}">
+            <input type="text" readonly style= "display:none" class="form-control range-value" value="{value}">
             <span class="right-ind kv-clear" style="" title="Clear">&times;</span>
             <span class="right-ind"><b class="caret"></b></span>
         </div>
@@ -503,7 +504,7 @@ JS;
                         $this->pluginOptions['ranges'] += [
                             Yii::t('kvdrp', 'Last {n} Months', ['n' => $n]) => ["{$beg}", "{$end}"],
                         ];
-                    }
+            }
                 }
             }
             if (empty($this->value)) {
@@ -538,7 +539,9 @@ JS;
         if (!$this->hideInput) {
             return $this->getInput('textInput') . $append;
         }
-        $content = str_replace('{input}', $this->getInput('hiddenInput') . $append, $this->containerTemplate);
+        //Origin
+        // $content = str_replace('{input}', $this->getInput('hiddenInput') . $append, $this->containerTemplate);
+        $content = str_replace('{input}', $this->getInput('textInput') . $append, $this->containerTemplate);
         $tag = ArrayHelper::remove($this->containerOptions, 'tag', 'div');
         return Html::tag($tag, $content, $this->containerOptions);
     }
@@ -623,7 +626,9 @@ JS;
             $this->setInputOpts($type, $options);
             return Html::activeHiddenInput($this->model, $attr, $options);
         }
-        $options['type'] = 'hidden';
+        //Origin
+        // $options['type'] = 'hidden';
+        $options['type'] = 'text';
         $options['name'] = $attr;
         $this->setInputOpts($type, $options);
         return Html::tag('input', '', $options);
