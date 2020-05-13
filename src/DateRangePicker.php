@@ -1,12 +1,11 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2015 - 2020
  * @package yii2-date-range
  * @version 1.7.3
  */
 
-namespace kartik\daterange;
+namespace vanterbit\daterange;
 
 use kartik\base\InputWidget;
 use Yii;
@@ -17,9 +16,10 @@ use yii\web\JsExpression;
 
 /**
  * An advanced date range picker input for Yii Framework 2 based on bootstrap-daterangepicker plugin.
+ * It's fork https://github.com/kartik-v/yii2-date-range
  *
  * @see https://github.com/dangrossman/bootstrap-daterangepicker
- * @author Kartik Visweswaran <kartikv2@gmail.com>
+ * @author Aleksandr Protchenko <protchenko.88@gmail.com>
  * @since 1.0
  */
 class DateRangePicker extends InputWidget

@@ -1,20 +1,19 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2015 - 2020
  * @package yii2-date-range
  * @version 1.7.3
  */
 
-namespace kartik\daterange;
+namespace vanterbit\daterange;
 
 use yii\web\View;
 use kartik\base\AssetBundle;
 
 /**
- * Language Asset bundle for \kartik\daterange\DateRangePicker.
+ * Language Asset bundle for \vanterbit\daterange\DateRangePicker.
  *
- * @author Kartik Visweswaran <kartikv2@gmail.com>
+ * @author Aleksandr Protchenko <protchenko.88@gmail.com>
  * @since 1.0
  */
 class LanguageAsset extends AssetBundle
@@ -26,7 +25,7 @@ class LanguageAsset extends AssetBundle
     /**
      * @inheritdoc
      */
-    public $depends = ['\kartik\daterange\MomentAsset'];
+    public $depends = ['\vanterbit\daterange\MomentAsset'];
 
     /**
      * @inheritdoc
