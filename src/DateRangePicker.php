@@ -155,10 +155,12 @@ class DateRangePicker extends InputWidget
      */
     public $containerTemplate = <<< HTML
         <div class="kv-drp-dropdown">
-            <span class="left-ind">{pickerIcon}</span>
+            <span class="left-ind kv-clear" style="" title="Clear">Очистить</span>
+            <!-- <span class="left-ind kv-clear" style="" title="Clear">&times; очистить</span>
+            <span class="left-ind">{pickerIcon}</span> -->
             <input type="text" readonly style= "display:none" class="form-control range-value" value="{value}">
-            <span class="right-ind kv-clear" style="" title="Clear">&times;</span>
-            <span class="right-ind"><b class="caret"></b></span>
+            <span class="right-ind">{pickerIcon}</span>
+            <!-- <span class="right-ind"><b class="caret"></b></span> -->
         </div>
         {input}
 HTML;
